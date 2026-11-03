@@ -28,8 +28,70 @@ sites:
 status-website:
   cname: status.primairvastgoed.nl
   name: Primair Beheer Status
+  theme: light
+  logoUrl: /primair-beeldmerk.png
+  favicon: /primair-beeldmerk.png
+
   introTitle: "Status van onze websites"
-  introMessage: "Bekijk de bereikbaarheid van onze websites en de geschiedenis van storingen."
+  introMessage: "Bekijk welke websites bereikbaar zijn en of er storingen zijn gemeld."
+
   navbar:
     - title: Status
       href: /
+    - title: Primair Vastgoed
+      href: https://primairvastgoed.nl
+
+  css: |
+    :root {
+      --body-background-color: #f5f7f9;
+      --body-text-color: #333333;
+      --card-background-color: #ffffff;
+      --nav-background-color: #ffffff;
+      --nav-border-bottom-color: #c9c9c9;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    nav img {
+      width: auto;
+      height: 2rem;
+      object-fit: contain;
+    }
+
+    main {
+      box-sizing: border-box;
+      width: min(100%, 68rem);
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 4vw, 2.5rem);
+    }
+
+    main h1,
+    main h2 {
+      color: #1e4d77;
+      line-height: 1.2;
+    }
+
+    main h1 {
+      font-size: clamp(1.85rem, 4vw, 2.75rem);
+      letter-spacing: -0.035em;
+      margin-bottom: 0.5rem;
+    }
+
+    main h2 {
+      font-size: 1.35rem;
+      margin-top: 2rem;
+    }
+
+    main article {
+      border: 1px solid #dbe2e8;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 6px rgb(30 77 119 / 5%);
+    }
+
+    :focus-visible {
+      outline: 3px solid #1e4d77;
+      outline-offset: 3px;
+    }
